@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mainView.layer.cornerRadius = 10
         
         redLabel.font = redLabel.font.withSize(17)
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rgbColor() {
+        
         redLabel.text = String(redSlider.value)
         greenLabel.text = String(greenSlider.value)
         blueLabel.text = String(blueSlider.value)
@@ -46,8 +48,12 @@ class ViewController: UIViewController {
         let colorBlue = CGFloat(blueSlider.value)
     
         mainView.backgroundColor = UIColor(red: colorRed, green: colorGreen, blue: colorBlue, alpha: 1)
+        
+        redLabel.text = String(round(redSlider.value * 10) / 10)
+        greenLabel.text = String(round(greenSlider.value * 10) / 10)
+        blueLabel.text = String(round(blueSlider.value * 10) / 10)
     }
-
+    
 }
 
 
