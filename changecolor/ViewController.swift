@@ -31,10 +31,6 @@ class ViewController: UIViewController {
         greenSlider.value = 0.5
         blueSlider.value = 0.8
         
-        redLabel.text = String(redSlider.value)
-        greenLabel.text = String(greenSlider.value)
-        blueLabel.text = String(blueSlider.value)
-        
     }
 
     @IBAction func rgbColor() {
@@ -47,7 +43,11 @@ class ViewController: UIViewController {
         let colorGreen = CGFloat(greenSlider.value)
         let colorBlue = CGFloat(blueSlider.value)
     
-        mainView.backgroundColor = UIColor(red: colorRed, green: colorGreen, blue: colorBlue, alpha: 1)
+        mainView.backgroundColor = UIColor(
+            red: colorRed,
+            green: colorGreen,
+            blue: colorBlue,
+            alpha: 1)
         
         redLabel.text = String(round(redSlider.value * 10) / 10)
         greenLabel.text = String(round(greenSlider.value * 10) / 10)
